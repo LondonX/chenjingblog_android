@@ -48,8 +48,6 @@ public class CommentActivity extends AppCompatActivity implements LRequestTool.O
     @Bind(R.id.activity_comment_fragmentEditor)
     View editorView;
 
-    private CommentEditorFragment editorFragment;
-
     private Article article;
     private LRequestTool requestTool = new LRequestTool(this);
     private List<Comment> comments;
@@ -78,7 +76,7 @@ public class CommentActivity extends AppCompatActivity implements LRequestTool.O
         activityCommentLv.setOnScrollListener(new NextPageLoader(activityCommentLv,
                 this,
                 ContextCompat.getColor(this, R.color.colorAccent)));
-        editorFragment = (CommentEditorFragment) getSupportFragmentManager()
+        CommentEditorFragment editorFragment = (CommentEditorFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.activity_comment_fragmentEditor);
         editorFragment.setArticle(article);
         if (write) {

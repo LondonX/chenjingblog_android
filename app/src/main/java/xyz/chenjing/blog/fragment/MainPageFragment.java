@@ -10,7 +10,6 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.google.gson.Gson;
@@ -23,6 +22,7 @@ import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnItemClick;
 import xyz.chenjing.blog.DetailActivity;
 import xyz.chenjing.blog.MainActivity;
 import xyz.chenjing.blog.R;
@@ -39,7 +39,7 @@ import xyz.chenjing.blog.net.Params;
  */
 public class MainPageFragment extends Fragment implements
         LRequestTool.OnResponseListener,
-        NextPageLoader.NextPagerTrigger, AdapterView.OnItemClickListener {
+        NextPageLoader.NextPagerTrigger {
     @Bind(R.id.page_main_srl)
     SwipeRefreshLayout pageMainSrl;
     @Bind(R.id.page_main_lv)
@@ -80,7 +80,6 @@ public class MainPageFragment extends Fragment implements
         pageMainSrl.setProgressViewOffset(false, startOffset, endOffset);
         pageMainLv.setOnScrollListener(new NextPageLoader(
                 pageMainLv, this, ContextCompat.getColor(getContext(), R.color.colorAccent)));
-        pageMainLv.setOnItemClickListener(this);
     }
 
     @Override
@@ -170,8 +169,8 @@ public class MainPageFragment extends Fragment implements
         getData();
     }
 
-    @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+    @OnItemClick(R.id.page_main_lv)
+    public void inspireArrticle(int position) {
         Intent detailIntent = new Intent(getActivity(), DetailActivity.class);
         detailIntent.putExtra("article", articles.get(position - 1));//-1 header(s)
         startActivity(detailIntent);

@@ -1,5 +1,7 @@
 package xyz.chenjing.blog.adapter;
 
+import android.text.Html;
+import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -61,7 +63,8 @@ public class DetailAdapter extends LAdapter {
                 itemDetailTvContent.setVisibility(View.GONE);
             } else {
                 itemDetailTvContent.setVisibility(View.VISIBLE);
-                itemDetailTvContent.setText(item.content);
+                itemDetailTvContent.setText(Html.fromHtml(item.content));
+                itemDetailTvContent.setMovementMethod(LinkMovementMethod.getInstance());
             }
         }
     }
