@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="server_error_">网络错误：</string>
+    <string name="player_prepare_error_">无法缓冲朗读声音</string>
+</resources>

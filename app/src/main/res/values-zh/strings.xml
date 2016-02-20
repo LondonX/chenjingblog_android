@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">博客陈</string>
+    <string name="open_source">开源许可</string>
+    <string name="contact">联系我</string>
+
+    <array name="pages">
+        <item>全部</item>
+        <item>工作</item>
+        <item>收藏</item>
+        <item>日常</item>
+    </array>
+    <string name="refresh">刷新</string>
+    <string name="comment">说点什么</string>
+    <string name="name">称呼</string>
+    <string name="email">Email</string>
+    <string name="your_comment">内容</string>
+    <string name="commit">提交</string>
+    <string name="commit_err">提交失败，稍后再试一次。</string>
+    <string name="commit_ok">很高兴收到你的留言!</string>
+    <string name="comments">留言</string>
+    <string name="more">更多</string>
+    <string name="activity_comment">所有留言</string>
+    <string name="phone">电话（非必要）</string>
+    <string name="content">正文</string>
+    <string name="write_comment">撰写留言</string>
+</resources>

@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Blog Chen</string>
+    <string name="contact">Contact me</string>
+    <string name="open_source">Open source license</string>
+
+    <array name="pages">
+        <item>All</item>
+        <item>Work</item>
+        <item>Collect</item>
+        <item>Diary</item>
+    </array>
+
+    <string name="sign" translatable="false">App by LondonX</string>
+    <string name="dcd" translatable="false">dcd</string>
+    <string name="test" translatable="false">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog</string>
+    <string name="test_date" translatable="false">2016/02/20</string>
+    <string name="refresh">Refresh</string>
+    <string name="comment">Leave a Comment</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="your_comment">Your comment</string>
+    <string name="commit">Commit</string>
+    <string name="commit_err">Commit failed, try it again later.</string>
+    <string name="commit_ok">Thanks for your comment !</string>
+    <string name="comments">Comments</string>
+    <string name="more">More</string>
+    <string name="activity_comment">All comments</string>
+    <string name="phone">Phone (unrequired)</string>
+    <string name="content">Content</string>
+    <string name="write_comment">Wirte comment</string>
+</resources>

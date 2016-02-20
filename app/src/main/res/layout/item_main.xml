@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:foreground="?selectableItemBackground"
+        android:stateListAnimator="@anim/touch_raise">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/item_main_imgCover"
+                android:layout_width="match_parent"
+                android:layout_height="196dp"
+                android:contentDescription="@string/dcd"
+                android:scaleType="centerCrop"
+                android:src="@color/test" />
+
+            <LinearLayout
+                android:id="@+id/item_main_linearDesc"
+                android:layout_width="match_parent"
+                android:layout_height="84dp"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/item_main_tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/test"
+                    android:textColor="@color/textColorDefault"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/item_main_tvPreview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="6dp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="@string/test"
+                    android:textColor="@color/textColorDefault" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</FrameLayout>

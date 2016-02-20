@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/activity_comment_srl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?actionBarSize">
+
+        <ListView
+            android:id="@+id/activity_comment_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:listSelector="@android:color/transparent"
+            tools:listitem="@layout/item_comment" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <fragment
+        android:id="@+id/activity_comment_fragmentEditor"
+        android:name="xyz.chenjing.blog.fragment.CommentEditorFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        tools:layout="@layout/fragment_comment_editor" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/activity_comment_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="16dp"
+        android:src="@drawable/edit"
+        android:tint="@android:color/white" />
+</FrameLayout>
